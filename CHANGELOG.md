@@ -23,6 +23,9 @@ Fixes:
    Fix handling tab when removing trailing whitespace, especially in connection
    with ATX headers.
 
+ - [#251](https://github.com/mity/md4c/issues/251):
+   Fix handling of allowed non-alphanumeric characters in URL detection.
+
 
 ## Version 0.5.2
 
