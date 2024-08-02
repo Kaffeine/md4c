@@ -24,7 +24,8 @@ Fixes:
    with ATX headers.
 
  - [#251](https://github.com/mity/md4c/issues/251):
-   Fix handling of allowed non-alphanumeric characters in URL detection.
+   Fix handling of allowed non-alphanumeric characters in URL detection and
+   allow '+' in 'path' component.
 
 
 ## Version 0.5.2

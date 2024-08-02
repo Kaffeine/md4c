@@ -3906,7 +3906,7 @@ md_analyze_permissive_autolink(MD_CTX* ctx, int mark_index)
         const MD_CHAR optional_end_char;
     } URL_MAP[] = {
         { _T('\0'), _T('.'),  _T(".-_"),      2, _T('\0') },    /* host, mandatory */
-        { _T('/'),  _T('/'),  _T("/.-_"),     0, _T('/') },     /* path */
+        { _T('/'),  _T('/'),  _T("/.-+_"),    0, _T('/') },     /* path */
         { _T('?'),  _T('&'),  _T("&.-+_=()"), 1, _T('\0') },    /* query */
         { _T('#'),  _T('\0'), _T(".-+_") ,    1, _T('\0') }     /* fragment */
     };
