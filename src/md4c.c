@@ -3978,8 +3978,10 @@ md_analyze_permissive_autolink(MD_CTX* ctx, int mark_index)
             } else if(end < line_end  &&
                         ISANYOF(end, URL_MAP[i].allowed_nonalnum_chars)  &&
                         md_scan_right_for_resolved_mark(ctx, right_cursor, end, &right_cursor) == NULL  &&
-                        ((end > line_beg && (ISALNUM(end-1) || CH(end-1) == _T(')')))  ||  CH(end) == _T('('))  &&
-                        ((end+1 < line_end && (ISALNUM(end+1) || CH(end+1) == _T('(')))  ||  CH(end) == _T(')')))
+                        ((end > line_beg && (ISALNUM(end-1)
+                                             || CH(end-1) == _T(')')))  ||  CH(end) == _T('('))  &&
+                        ((end+1 < line_end && (ISALNUM(end+1)
+                                               || CH(end+1) == _T('(')))  ||  CH(end) == _T(')')))
             {
                 if(CH(end) == URL_MAP[i].delim_char)
                     n_components++;
